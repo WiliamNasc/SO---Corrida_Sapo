@@ -88,21 +88,12 @@ public class Corrida extends JFrame {
 	
 	public void corrida(){
 		
-		Rectangle r = new Rectangle();
-		r.setBounds(rd.nextInt(401), 106, 20, 20);
-		r = r.getBounds();
-		
-		lblSapo_1.setBounds(r);
-		
-		r.setBounds(rd.nextInt(401), 168, 20, 20);
-		r.getBounds();
-		lblSapo_2.setBounds(r);
-		
-		
-		
-		Classe_Threads c = new Classe_Threads();
-		c.corri();
-		
+		for(int i = 0; i <= 2; i++){
+			
+			Classe_Threads c = new Classe_Threads(lblSapo_1,lblSapo_2,lblChegada);
+			c.start();
+			
+		}
 		
 	}
 }
