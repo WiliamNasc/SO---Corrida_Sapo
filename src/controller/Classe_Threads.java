@@ -12,7 +12,8 @@ public class Classe_Threads extends Thread {
 	private Rectangle r = new Rectangle();
 	private Random rd = new Random ();
 	private JLabel lblS1,lblS2,lblCheg;
-	static int i;
+	static int i1,i2;
+	long tempo = 100;
 	
 	public Classe_Threads(JLabel lblS1,JLabel lblS2,JLabel lblCheg) {
 		
@@ -24,31 +25,36 @@ public class Classe_Threads extends Thread {
 	@Override
 	public void run() {
 		
-		sapo_1();
-		sapo_2();
+			sapo();
+			//sapo_2();
+		
+		
 	}
 	
 	
-	public void sapo_1 (){
+	public void sapo(){
 		
 		if (lblS1.getAlignmentX() == lblCheg.getAlignmentX()){
 			
-			i +=1;
-			lblS1.setBounds(i, 106, 20, 20);
+			while (i1 <= 401){
+				try {
+					sleep(tempo);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				i1 += rd.nextInt(10);
+				i2 += rd.nextInt(10);
+				lblS1.setBounds(i1, 106, 20, 20);
+				lblS2.setBounds(i2,  168, 41, 14);
+				
+			}
 			
 		}else {System.out.println("Merda");}
 		
 	}
 	
-	public void sapo_2 (){
-		
-		if (lblS2.getAlignmentX() == lblCheg.getAlignmentX()){
-			
-			i +=1;
-			lblS2.setBounds(i,  168, 41, 14);
-			
-		}else {System.out.println("Merda");}
-	}
 
 }
  
