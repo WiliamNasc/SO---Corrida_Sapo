@@ -4,6 +4,7 @@ import java.awt.Rectangle;
 import java.util.Random;
 
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 import view.Corrida;
 
@@ -26,7 +27,7 @@ public class Classe_Threads extends Thread {
 	public void run() {
 		
 			sapo();
-			//sapo_2();
+			
 		
 		
 	}
@@ -34,9 +35,10 @@ public class Classe_Threads extends Thread {
 	
 	public void sapo(){
 		
-		if (lblS1.getAlignmentX() == lblCheg.getAlignmentX()){
+		if (lblS1.getAlignmentX() == lblCheg.getAlignmentX()
+				& lblS2.getAlignmentX() == lblCheg.getAlignmentX()){
 			
-			while (i1 <= 401){
+			while (i1 <= 401 & i2 <= 401){
 				try {
 					sleep(tempo);
 				} catch (InterruptedException e) {
@@ -51,7 +53,11 @@ public class Classe_Threads extends Thread {
 				
 			}
 			
-		}else {System.out.println("Merda");}
+			if (i1 > i2){JOptionPane.showMessageDialog(null,"Vencedor : Sapo 1");}
+				else if (i2 > i1){JOptionPane.showMessageDialog(null,"Vencedor : Sapo 2");}
+					else {JOptionPane.showMessageDialog(null,"Empate");}
+			
+		}	else {System.out.println("Merda");}
 		
 	}
 	

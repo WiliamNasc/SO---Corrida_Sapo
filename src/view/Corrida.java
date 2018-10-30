@@ -16,6 +16,7 @@ import controller.Classe_Threads;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JButton;
+import java.awt.Font;
 
 public class Corrida extends JFrame {
 
@@ -74,6 +75,11 @@ public class Corrida extends JFrame {
 		btnStart.setBounds(247, 261, 89, 23);
 		contentPane.add(btnStart);
 		
+		JLabel label = new JLabel("|");
+		label.setFont(new Font("Tahoma", Font.PLAIN, 99));
+		label.setBounds(401, 80, 46, 120);
+		contentPane.add(label);
+		
 		ActionListener start = new ActionListener() {
 			
 			@Override
@@ -86,14 +92,15 @@ public class Corrida extends JFrame {
 		btnStart.addActionListener(start);
 	}
 	
+			
 	public void corrida(){
 		
-		for(int i = 0; i <= 2; i++){
+		//for(int i = 1; i <= 2; i++){
 			
 			Classe_Threads c = new Classe_Threads(lblSapo_1,lblSapo_2,lblChegada);
 			c.start();
 			
-		}
+		//}
 		
 	}
 }
