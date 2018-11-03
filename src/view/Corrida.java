@@ -17,6 +17,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.Font;
+import javax.swing.ImageIcon;
 
 public class Corrida extends JFrame {
 
@@ -52,6 +53,7 @@ public class Corrida extends JFrame {
 	 * Create the frame.
 	 */
 	public Corrida() {
+		setTitle("Corrida de Sapos");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 600, 401);
 		contentPane = new JPanel();
@@ -59,16 +61,19 @@ public class Corrida extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		lblSapo_1 = new JLabel("S1");
-		lblSapo_1.setBounds(10, 106, 41, 14);
+		lblSapo_1 = new JLabel("");
+		lblSapo_1.setIcon(new ImageIcon("C:\\Users\\Wiliam\\workspace\\Corrida_Sapo\\src\\Imagens\\frog.png"));
+		lblSapo_1.setBounds(0, 99, 41, 29);
 		contentPane.add(lblSapo_1);
 		
-		lblSapo_2 = new JLabel("S2");
-		lblSapo_2.setBounds(10, 168, 41, 14);
+		lblSapo_2 = new JLabel("");
+		lblSapo_2.setIcon(new ImageIcon("C:\\Users\\Wiliam\\workspace\\Corrida_Sapo\\src\\Imagens\\frog2.png"));
+		lblSapo_2.setBounds(0, 153, 41, 29);
 		contentPane.add(lblSapo_2);
 		
-		lblChegada = new JLabel("Chegada");
-		lblChegada.setBounds(401, 40, 60, 14);
+		lblChegada = new JLabel("CHEGADA");
+		lblChegada.setFont(new Font("Arial Black", Font.BOLD, 11));
+		lblChegada.setBounds(384, 43, 74, 14);
 		contentPane.add(lblChegada);
 		
 		JButton btnStart = new JButton("Start");

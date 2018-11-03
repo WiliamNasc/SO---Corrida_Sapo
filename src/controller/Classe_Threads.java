@@ -48,8 +48,8 @@ public class Classe_Threads extends Thread {
 				
 				i1 += rd.nextInt(10);
 				i2 += rd.nextInt(10);
-				lblS1.setBounds(i1, 106, 20, 20);
-				lblS2.setBounds(i2,  168, 41, 14);
+				lblS1.setBounds(i1, 99, 41, 29);
+				lblS2.setBounds(i2, 153, 41, 29);
 				
 			}
 			
