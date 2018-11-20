@@ -61,13 +61,11 @@ public class Corrida extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		lblSapo_1 = new JLabel("");
-		lblSapo_1.setIcon(new ImageIcon("C:\\Users\\Wiliam\\workspace\\Corrida_Sapo\\src\\Imagens\\frog.png"));
+		lblSapo_1 = new JLabel("S1");
 		lblSapo_1.setBounds(0, 99, 41, 29);
 		contentPane.add(lblSapo_1);
 		
-		lblSapo_2 = new JLabel("");
-		lblSapo_2.setIcon(new ImageIcon("C:\\Users\\Wiliam\\workspace\\Corrida_Sapo\\src\\Imagens\\frog2.png"));
+		lblSapo_2 = new JLabel("S2");
 		lblSapo_2.setBounds(0, 153, 41, 29);
 		contentPane.add(lblSapo_2);
 		
